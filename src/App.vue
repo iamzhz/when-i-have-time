@@ -34,12 +34,12 @@ onMounted(() => {
 
         const isFreeDay = (date) => {
           const formattedDate = formatDate(date);
-          return weekDaysFree.includes(date.toLocaleString('default', { weekday: 'long' })) ||
+          return weekDaysFree.includes(date.toLocaleString('en-US', { weekday: 'long' })) ||
                  specialDaysFree.includes(formattedDate);
         };
         const isBusyDay = (date) => {
           const formattedDate = formatDate(date);
-          return weekDaysBusy.includes(date.toLocaleString('default', { weekday: 'long' })) ||
+          return weekDaysBusy.includes(date.toLocaleString('en-US', { weekday: 'long' })) ||
                  specialDaysBusy.includes(formattedDate);
         };
         const days = [];
